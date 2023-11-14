@@ -31,6 +31,9 @@ const server = http.createServer(async (req, res) => {
                 todos: todosData
             }
             res.writeHead(200, {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "*",
+                "Access-Control-Allow-Headers": "*",
                 "content-type": "application/json",
                 "content-length": Buffer.byteLength(JSON.stringify(todosData))
             })
@@ -53,6 +56,9 @@ const server = http.createServer(async (req, res) => {
                     message: "todo added succesfully"
                 }
                 res.writeHead(200, {
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Methods": "*",
+                    "Access-Control-Allow-Headers": "*",
                     "content-type": "application/json",
                     "content-length": Buffer.byteLength(JSON.stringify(response))
                 }),
@@ -72,6 +78,9 @@ const server = http.createServer(async (req, res) => {
                 message: "todo updated succesfully"
             }
             res.writeHead(200, {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "*",
+                "Access-Control-Allow-Headers": "*",
                 "contend-type": "application/json",
                 "contend-length": Buffer.byteLength(JSON.stringify(response))
             })
@@ -90,6 +99,9 @@ const server = http.createServer(async (req, res) => {
                 message: "todo deleted succesfully"
             }
             res.writeHead(200, {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "*",
+                "Access-Control-Allow-Headers": "*",
                 "contend-type": "application/json",
                 "contend-length": Buffer.byteLength(JSON.stringify(response))
             })
